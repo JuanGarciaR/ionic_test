@@ -16,7 +16,6 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
     <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
 
 
     <!-- cordova script (this will be a 404 during development) -->
@@ -31,7 +30,7 @@
     <!-- 
       The nav bar that will be updated as we navigate between views.
     -->
-    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+    <ion-nav-bar class="bar-stable nav-title-slide-ios7 bar-positive">
       <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-back">
         Back
       </ion-nav-back-button>
@@ -42,5 +41,31 @@
       have templates inline in this html file if you'd like).
     -->
     <ion-nav-view></ion-nav-view>
+
+    <script id="modal.html" type="text/ng-template">
+      <div class="modal" ng-controller="ModalCtrl">
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">New Contact</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+        </ion-header-bar>
+        <ion-content>
+          Search: <input type="text" ng-model="searchState">
+          <ion-list class="list">
+ 
+            
+      <label class="item item-radio" ng-model="contact" ng-repeat="contact in contacts | filter:searchState">
+    <input type="radio" name="group">
+    <div class="item-content">
+   {{contact.name}}
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+
+            
+            
+          </ion-list>
+        </ion-content>
+      </div>
+    </script>
   </body>
 </html>

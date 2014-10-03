@@ -1,0 +1,32 @@
+/* Empty. Add your own CSS if you like */
+.scroll { height: 100%; }
+.map-container,
+.google-map { height: 100%; }
+#map-canvas { width: 100%; height: 100%; }
+
+#infobox {
+    border:0 solid black;
+    margin-top: 8px;
+    background: #000;
+    color:#fff;
+    font-family: Helvetica;
+    padding: 1em 1em;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+}
+#infobox p { margin: 0; }
+#infobox .titulo { font-size: 15px; line-height: 1.25em; margin-bottom: 5px; }
+#infobox .endereco { font-size: 12px; line-height: 1.25em; margin-bottom: 15px; }
+#infobox a {
+    cursor: pointer;
+    background-color: #33AAFF;
+    text-decoration: none;
+    padding: 5px 0 2px;
+    color: #eee;
+    text-align: center;
+    display: block;
+    margin: 5px auto 0;
+    text-transform: uppercase;
+}
+#infobox a:hover {
+    background-color: #40B7FF;
+}
